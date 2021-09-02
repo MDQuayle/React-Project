@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route, Switch } from "react-router-dom"
 import '../App.css';
 import Home from './Home';
@@ -7,13 +7,16 @@ import FactList from './FactList';
 import Navbar from './Navbar';
 
 function App() {
+useEffect(() => {
+  fetch('localhost:3000')
+})
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
         <Switch>
         <Route exact path="/facts">
-          <FactList />
+          <FactList facts = {facts}/>
         </Route>
         <Route exact path="/login">
           <LogIn />
