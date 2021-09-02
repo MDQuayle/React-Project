@@ -6,7 +6,7 @@ const linkStyles = {
   width: "50px",
   padding: "12px",
   margin: "0 6px 6px",
-  background: "blue",
+  background: "black",
   textDecoration: "none",
   color: "white",
 };
@@ -19,7 +19,8 @@ function Navbar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: "white",
+          color: "black",
         }}
       >
         Home
@@ -29,17 +30,19 @@ function Navbar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+            background: "white",
+            color: "black",
         }}
       >
-        Animal Facts
+        Facts
       </NavLink>
       <NavLink
         to="/login"
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+            background: "white",
+            color: "black",
         }}
       >
         Login

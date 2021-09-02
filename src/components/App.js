@@ -1,9 +1,10 @@
 import React from 'react'
 import { Route, Switch } from "react-router-dom"
-import './App.css';
-import Home from './components/Home';
-import LogIn from './components/LogIn';
-import FactList from './components/FactList';
+import '../App.css';
+import Home from './Home';
+import LogIn from './LogIn';
+import FactList from './FactList';
+import Navbar from './Navbar';
 
 function App() {
   return (

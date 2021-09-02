@@ -1,5 +1,5 @@
 import React from 'react'
-import FactCard from './components/FactCard';
+import FactCard from './FactCard';
 
 function FactList(){
     return (
