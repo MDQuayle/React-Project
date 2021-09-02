@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Switch } from "react-router-dom"
 import './App.css';
 import Home from './components/Home';
 import LogIn from './components/LogIn';
@@ -9,9 +10,17 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar />
-        <Home />
-        <LogIn />
-        <FactList />
+        <Switch>
+        <Route exact path="/facts">
+          <FactList />
+        </Route>
+        <Route exact path="/login">
+          <LogIn />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
       </header>
     </div>
   );
