@@ -11,7 +11,7 @@ const [facts,setFacts] = useState([])
 
 
 useEffect(() => {
-  fetch('localhost:3000')
+  fetch('http://localhost:3000/facts')
   .then(res=> res.json())
   .then(factData => setFacts(factData))
 },[])
