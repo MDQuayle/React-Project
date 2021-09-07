@@ -1,10 +1,11 @@
 import React from 'react'
 import FactCard from './FactCard';
 
-function FactList(){
+function FactList(facts){
+    const allFacts = facts.map(fact => <FactCard fact={fact} /> )
     return (
         <div>
-            <FactCard />
+            {allFacts}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Route, Switch } from "react-router-dom"
 import '../App.css';
 import Home from './Home';
@@ -7,9 +7,15 @@ import FactList from './FactList';
 import Navbar from './Navbar';
 
 function App() {
+const [facts,setFacts] = useState([]) 
+
+
 useEffect(() => {
   fetch('localhost:3000')
-})
+  .then(res=> res.json())
+  .then(factData => setFacts(factData))
+},[])
+
   return (
     <div className="App">
       <header className="App-header">
