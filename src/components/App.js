@@ -29,7 +29,7 @@ function newFact(newFact){
         <Route exact path="/facts">
           <FactList facts = {facts}/>
         </Route>
-        <Route exact path="/form">
+        <Route exact path="facts/new">
           <FactForm newFact = {newFact}/>
         </Route>
         <Route exact path="/login">
