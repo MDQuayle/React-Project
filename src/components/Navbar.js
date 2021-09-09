@@ -37,6 +37,17 @@ function Navbar() {
         Facts
       </NavLink>
       <NavLink
+        to="/form"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background: "white",
+            color: "black",
+        }}
+      >
+        Form
+      </NavLink>
+      <NavLink
         to="/login"
         exact
         style={linkStyles}
