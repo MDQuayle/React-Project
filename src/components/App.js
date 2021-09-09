@@ -4,6 +4,7 @@ import '../App.css';
 import Home from './Home';
 import LogIn from './LogIn';
 import FactList from './FactList';
+import FactForm from './FactForm'
 import Navbar from './Navbar';
 
 function App() {
@@ -16,6 +17,10 @@ useEffect(() => {
   .then(factData => setFacts(factData))
 },[])
 
+function newFact(newFact){
+  setFacts([...facts, newFact])
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +28,9 @@ useEffect(() => {
         <Switch>
         <Route exact path="/facts">
           <FactList facts = {facts}/>
+        </Route>
+        <Route exact path="/form">
+          <FactForm newFact = {newFact}/>
         </Route>
         <Route exact path="/login">
           <LogIn />
