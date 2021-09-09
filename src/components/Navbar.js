@@ -45,7 +45,7 @@ function Navbar() {
             color: "black",
         }}
       >
-        Form
+        Add A New Fact
       </NavLink>
       <NavLink
         to="/login"
