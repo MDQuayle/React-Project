@@ -47,17 +47,6 @@ function Navbar() {
       >
         New Fact
       </NavLink>
-      <NavLink
-        to="/login"
-        exact
-        style={linkStyles}
-        activeStyle={{
-            background: "white",
-            color: "black",
-        }}
-      >
-        Login
-      </NavLink>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Route, Switch } from "react-router-dom"
 import '../App.css';
 import Home from './Home';
-import LogIn from './LogIn';
 import FactList from './FactList';
 import FactForm from './FactForm'
 import Header from './Header';
@@ -31,9 +30,6 @@ function newFact(newFact){
         </Route>
         <Route exact path="facts/new">
           <FactForm newFact = {newFact}/>
-        </Route>
-        <Route exact path="/login">
-          <LogIn />
         </Route>
         <Route exact path="/">
           <Home />
