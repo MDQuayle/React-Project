@@ -1,20 +1,51 @@
 import React from 'react'
 
-function LogIn(){
-    return (
-        <div>
-            <h1>Login!</h1>
-      <form>
-        <div>
-          <input type="text" name="username" placeholder="Username" />
-        </div>
-        <div>
-          <input type="password" name="password" placeholder="Password" />
-        </div>
-        <input type="submit" value="Submit" />
-      </form>
-        </div>
-    )
+function LogIn({onLogIn}){
+  const [logInData, setLogInData] = useState({
+    username: "",
+    password: "",
+  });
+
+  function handleChange(e) {
+    setLogInData({
+      ...logInData,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("http://localhost:3001/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(logInData),
+    })
+      .then((r) => r.json())
+      .then((user) => {
+        onLogIn(user);
+        history.push("/");
+      });
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="username"
+        value={logInData.username}
+        onChange={handleChange}
+      />
+      <input
+        type="password"
+        name="password"
+        value={logInData.password}
+        onChange={handleChange}
+      />
+      <button type="submit">Login</button>
+    </form>
+  );
 }
 
 export default LogIn; 

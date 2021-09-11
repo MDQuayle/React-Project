@@ -5,7 +5,7 @@ import Home from './Home';
 import LogIn from './LogIn';
 import FactList from './FactList';
 import FactForm from './FactForm'
-import Navbar from './Navbar';
+import Header from './Header';
 
 function App() {
 const [facts,setFacts] = useState([]) 
@@ -24,7 +24,7 @@ function newFact(newFact){
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar />
+        <Header />
         <Switch>
         <Route exact path="/facts">
           <FactList facts = {facts}/>
