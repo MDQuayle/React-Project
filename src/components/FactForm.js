@@ -46,7 +46,7 @@ function handleImageChange(e){
                     Image URL:
                     <input type = 'text' value = {image} onChange = {handleImageChange}/>
                 </label></p>
-                    <p><input type = 'submit' value= "Add my fact!"/></p>
+                    <p><input className= "button" type = 'submit' value= "Add my fact!"/></p>
             </form>
         </div>
     )
