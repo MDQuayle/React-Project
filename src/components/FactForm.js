@@ -32,7 +32,6 @@ function handleImageChange(e){
     setImage(e.target.value)
 }
     return (
-        <div>
             <form onSubmit = {handleSubmit}>
                 <p><label>
                     Animal:
@@ -46,9 +45,8 @@ function handleImageChange(e){
                     Image URL:
                     <input type = 'text' value = {image} onChange = {handleImageChange}/>
                 </label></p>
-                    <p><input className= "button" type = 'submit' value= "Add my fact!"/></p>
+                    <p><input className = "button" type = 'submit' value= "Add my fact!"/></p>
             </form>
-        </div>
     )
 }
 

@@ -37,7 +37,7 @@ function Navbar() {
         Facts
       </NavLink>
       <NavLink
-        to="/facts/new"
+        to="/newFact"
         exact
         style={linkStyles}
         activeStyle={{
