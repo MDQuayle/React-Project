@@ -19,6 +19,16 @@ useEffect(() => {
 function newFact(newFact){
   setFacts([...facts, newFact])
 }
+function handleDelete(id) {
+  fetch(`http://localhost:3000/facts/${id}`, {
+    method: "DELETE",
+  })
+  .then((r) => r.json())
+  .then(() => {
+    const updatedFacts = facts.filter((f) => f.id !== id);
+      setFacts(updatedFacts);
+  })
+}
 
   return (
     <div className="App">
@@ -26,7 +36,7 @@ function newFact(newFact){
         <Header />
         <Switch>
         <Route exact path="/facts">
-          <FactList facts = {facts}/>
+          <FactList facts = {facts} handleDelete={handleDelete}/>
         </Route>
         <Route exact path="/newFact">
           <FactForm newFact = {newFact}/>
