@@ -1,8 +1,8 @@
 import React from 'react'
 import FactCard from './FactCard';
 
-function FactList({facts, handleDelete}){
-    const allFacts = facts.map(fact => <FactCard key = {fact.id} fact={fact} handleDelete={handleDelete}/> )
+function FactList({facts, setFacts}){
+    const allFacts = facts.map((fact) => <FactCard key = {fact.id} fact={fact} facts={facts} setFacts={setFacts} id={fact.id}/> )
     return (
         <div>
             {allFacts}
