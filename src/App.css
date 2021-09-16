@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .App-logo {
@@ -46,7 +47,7 @@ img {
   height: 300px;
 }
 
-.button {
+.submitButton {
   background-color: #34D86A;
   border: none;
   color: rgb(0, 0, 0);
@@ -56,4 +57,25 @@ img {
   display: inline-block;
   font-size: 21px;
   font-weight:bolder
+}
+
+.deleteButton {
+  background-color: #ee0a0a;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 21px;
+  font-weight:bolder
+}
+
+.factCard {
+  padding-bottom: 15px;
+}
+
+.inputField {
+  height:25px;
+  font-size:12pt;
 }

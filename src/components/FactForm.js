@@ -35,17 +35,17 @@ function handleImageChange(e){
             <form onSubmit = {handleSubmit}>
                 <p><label>
                     Animal:
-                    <input type = 'text' value = {animal} onChange = {handleAnimalChange}/>
+                    <input className = "inputField" type = 'text' value = {animal} onChange = {handleAnimalChange}/>
                 </label></p>
                 <p><label>
                     Fact:
-                    <input type = 'text' value = {factoid} onChange = {handleFactoidChange}/>
+                    <input className = "inputField" type = 'text' value = {factoid} onChange = {handleFactoidChange}/>
                 </label></p>
                 <p><label>
                     Image URL:
-                    <input type = 'text' value = {image} onChange = {handleImageChange}/>
+                    <input className = "inputField" type = 'text' value = {image} onChange = {handleImageChange}/>
                 </label></p>
-                    <p><input className = "button" type = 'submit' value= "Add my fact!"/></p>
+                    <p><input className = "submitButton" type = 'submit' value= "Add my fact!"/></p>
             </form>
     )
 }
