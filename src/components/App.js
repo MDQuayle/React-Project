@@ -19,7 +19,6 @@ useEffect(() => {
 function newFact(newFact){
   setFacts([...facts, newFact])
 }
-
   return (
     <div className="App">
       <header className="App-header">
