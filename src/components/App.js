@@ -25,7 +25,7 @@ function newFact(newFact){
         <Header />
         <Switch>
         <Route exact path="/facts">
-          <FactList facts = {facts} setFacts={setFacts}/>
+          <FactList facts = {facts}/>
         </Route>
         <Route exact path="/newFact">
           <FactForm newFact = {newFact}/>

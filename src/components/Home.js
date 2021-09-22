@@ -1,5 +1,4 @@
 import React from 'react'
-
 function Home(){
     return (
         <div>
@@ -9,4 +8,4 @@ function Home(){
     )
 }
 
-export default Home; 
+export default Home;

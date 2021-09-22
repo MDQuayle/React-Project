@@ -59,8 +59,19 @@ img {
   font-weight:bolder
 }
 
-.deleteButton {
+.downVote {
   background-color: #ee0a0a;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 21px;
+  font-weight:bolder
+}
+.upVote {
+  background-color: #00ff00;
   border: none;
   color: rgb(255, 255, 255);
   padding: 15px 32px;

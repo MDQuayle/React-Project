@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 
-function FactCard({fact, facts, setFacts}){
-    const [isDeleted,setIsDeleted] = useState(true)
-
-    function handleDelete(id) {
-        fetch(`http://localhost:3000/facts/${fact.id}`, {
-          method: "DELETE",
-        })
-            const updatedFacts = facts.filter((f) => f.id !== id);
-            setFacts(updatedFacts);
-            setIsDeleted(!isDeleted)
-        }
+function FactCard({fact}){
+    const [count, setCount] = useState(0)
+    function handleUpClick(){
+        setCount(count +1)
+    }
+    function handleDownClick(){
+        setCount(count-1)
+    }
         return (
         <div className= "factCard">
             <img src= {fact.image} alt="animal sounds"/>
             <h2>{fact.animal}</h2>
             <p>{fact.factoid}</p>
-            <button className = "deleteButton" onClick={handleDelete}>{isDeleted ? "Delete Fact" : "Deleted"}</button>
+            <p>{count}</p>
+            <button className = "upVote" onClick={handleUpClick}><span role="img" aria-label="thumbs-up">👍</span></button>
+            <button className = "downVote" onClick={handleDownClick}><span role="img" aria-label="thumbs-down">👎</span></button>
         </div>
     )
 }
