@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# APP FUNCTIONALITY AND DETAILS
+
+The App displays animal facts and let's the user upvote and downvote them. The user can submit their own animal facts to be displayed in the list of facts.
+
+The component structure is as follows 
+APP
+  HEADER
+    NAVBAR
+  HOME
+  FACTLIST
+    FACTCARD
+  FACTFORM
+
+The App component fetches the fact data. It holds the function to add new facts to the data. It holds the state that contains the fetched data. Contains the routes for address bar navigation.
+
+The Header component is just a container for the navbar component.
+
+the Navbar component contains the links to the routes.
+
+Home is just a splash page welcoming the user to the app.
+
+FactList contains the individual FactCards to be displayed
+
+FactCard displays the individual facts to the user
+
+FactForm displays a form for the user to be able to submit their own facts.
+
+
